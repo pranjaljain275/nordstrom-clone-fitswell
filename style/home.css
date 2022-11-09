@@ -1,0 +1,202 @@
+section {
+  margin: 50px auto;
+  width: 95%;
+}
+#midline {
+  text-align: center;
+}
+#midline img {
+  margin: auto;
+  width: 95%;
+  height: 14px;
+}
+#landing1 {
+  text-align: center;
+  position: relative;
+  color: white;
+}
+#landing1 img {
+  width: 100%;
+}
+#landing1 > div:last-child {
+  width: 40%;
+  position: absolute;
+  z-index: 3;
+  top: 230px;
+  right: 190px;
+}
+#landing1 div:last-child div {
+  display: flex;
+  justify-content: space-evenly;
+}
+#landing1 p {
+  font-size: 14px;
+  margin: 5px auto;
+}
+#landing1 a {
+  font-style: 14px;
+  color: white;
+  text-decoration: none;
+  margin: 5px auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+#gifts img {
+  width: 100%;
+}
+#gifts div {
+  display: flex;
+  justify-content: space-around;
+}
+#thread {
+  text-align: center;
+}
+#thread > div {
+  display: flex;
+  justify-content: space-between;
+}
+#thread > div > div {
+  text-align: left;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+#thread > div > div > img {
+  width: 100%;
+}
+#thread > h1 {
+  margin-bottom: 10px;
+}
+#thread > p {
+  margin: 6px;
+}
+#thread > p:nth-child(4) {
+  margin: 6px;
+  letter-spacing: 3px;
+  text-decoration: underline;
+}
+#thread > div > div > p {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  margin: 10px auto;
+  line-height: 1.5rem;
+}
+#thread > div > div > a {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-decoration: underline;
+}
+#service {
+  text-align: center;
+}
+#service > div {
+  display: flex;
+  justify-content: space-between;
+}
+#service > div > div {
+  text-align: left;
+  padding-top: 10px;
+  margin-top: 20px;
+  width: 25%;
+}
+#service > div > div > img {
+  width: 100%;
+}
+#service > h1 {
+  margin-bottom: 10px;
+}
+#service > p {
+  margin: 6px;
+}
+#service > p:nth-child(4) {
+  margin: 6px;
+  letter-spacing: 3px;
+  text-decoration: underline;
+}
+#service > div > div > h2 {
+  margin: 10px 0;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+#service > div > div > p {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  margin: 10px auto;
+  line-height: 1.5rem;
+  margin-right: 40px;
+}
+#service > div > div > a {
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-decoration: underline;
+}
+#trending #slides {
+  position: relative;
+  /* display: none; */
+}
+#trending #slides img {
+  /* display: flex; */
+  /* justify-content: space-around; */
+  width: 90%;
+}
+#trending #slides div {
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  right: 100px;
+  bottom: 50%;
+}
+#trending h2 {
+  font-size: 20px;
+  margin: 6px auto;
+}
+#trending a {
+  border: 1px solid black;
+  margin: 10px auto;
+}
+#trending p {
+  margin: 10px auto;
+}
+#trending {
+    position: relative;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  bottom: 50%;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+#category > div {
+  display: flex;
+  justify-content: space-between;
+}
+#category > div > div {
+  text-align: center;
+}
+#category > div > div > img {
+  width: 100%;
+}
+#category > div > div > h2 {
+  margin: 10px auto;
+  font-size: 18px;
+  opacity: 0.9;
+}
