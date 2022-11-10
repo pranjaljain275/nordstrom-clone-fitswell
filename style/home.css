@@ -46,6 +46,35 @@ h1 {
   font-size: 18px;
   opacity: 0.9;
 }
+#merry {
+  position: relative;
+}
+#merry div:first-child img{
+  width: 100%;
+}
+#merry div:last-child{
+  line-height: 1.5rem;
+  position: absolute;
+  z-index: 1;
+  left: 30%;
+  bottom: 5%;
+}
+#merry p{
+  font-size: 20px;
+  text-align: center;
+}
+#merry span{
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+  cursor: pointer;
+}
+#merry span:hover {
+  opacity: 0.8;
+}
+#merry div p:last-child{
+  margin-top: 24px;
+}
 #gifts img {
   width: 100%;
 }
@@ -138,6 +167,9 @@ h1 {
   letter-spacing: 0.25px;
   text-decoration: underline;
 }
+#trending {
+    position: relative;
+}
 #trending #slides {
   position: relative;
   /* display: none; */
@@ -164,9 +196,6 @@ h1 {
 }
 #trending p {
   margin: 10px auto;
-}
-#trending {
-    position: relative;
 }
 .prev,
 .next {
@@ -199,4 +228,24 @@ h1 {
   margin: 10px auto;
   font-size: 18px;
   opacity: 0.9;
+}
+#touch {
+  position: relative;
+}
+#touch div:first-child img{
+  width: 100%;
+}
+#touch div:last-child{
+  line-height: 1.5rem;
+  position: absolute;
+  z-index: 1;
+  left: 5%;
+  bottom: 20%;
+}
+#touch h2 {
+  font-size: 24px;
+}
+#touch p{
+  font-size: 16px;
+  margin-top: 12px;
 }
