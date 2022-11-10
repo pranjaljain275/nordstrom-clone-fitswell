@@ -62,9 +62,11 @@ li {
     justify-content: space-between;
     padding: 10px 30px;
 }
-#midbar img {
-    width: 15%;
+#midbar a img {
     height: 70px;
+}
+#midbar>a:hover{
+    opacity: 1;
 }
 #midbar div{
     display: flex;
@@ -150,11 +152,12 @@ hr {
 #btmbar>ul {
     display: flex;
     justify-content: space-evenly;
+    padding: 20px 0;
 }
 #btmbar>ul>li {
     list-style: none;
     font-weight: lighter;
-    padding: 30px 0;
+    padding: 10px 0;
     /* margin: 4px; */
     letter-spacing: 0.5px;
     font-size: 14px;
@@ -289,3 +292,8 @@ footer {
 #social ul div img{
     width: 24px;
 }
+
+/* #footer {
+    background-color:whitesmoke;
+    font-size: 14px;
+} */
