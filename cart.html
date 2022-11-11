@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style/header-footer.css" />
+    <link rel="stylesheet" href="style/cart.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+      });
+    </script>
+  </head>
+  <body>
+    <header id="headers"></header>
+
+    <main>
+      <div id="bag">
+        <h1>Shopping Bag</h1>
+        <p>Items in your bag are not on hold.</p>
+        <p>
+          <i class="fa fa-gift"></i> Choose gift options when you check out.
+        </p>
+      </div>
+      <hr />
+      <div id="delivery">
+        <h1>
+          Delivery (<span id="totalItem">1</span> Items) to <span>INDIA</span>
+        </h1>
+        <p>International shipping</p>
+      </div>
+      <hr />
+      <div id="container"></div>
+      <hr />
+      <div id="amounttotal">
+        <div>
+          <p>Accepted Payment Methods</p>
+          <p>Need help? Call 1.888.282.6060 or <a href="#">chat with us</a></p>
+          <p><a href="">Shipping internationally?</a></p>
+        </div>
+        <div>
+          <h1>TOTAL PRICE:<span id="amount">0</span></h1>
+          <hr />
+          <button id="checkout">Check Out</button>
+        </div>
+      </div>
+      <hr />
+      <div id="coupon">
+        <input type="text" id="discount" placeholder="Apply Coupon" />
+        <button>Apply</button>
+      </div>
+    </main>
+
+    <footer id="footers"></footer>
+  </body>
+</html>
+<script>
+  let cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
+
+  let totalPrice = cartData.reduce((acc, elem, index) => {
+    return acc + +elem.price;
+  }, 0);
+  document.querySelector("#amount").textContent = totalPrice;
+
+  let totalItem = +cartData.length;
+  document.querySelector("#totalItem").textContent = totalItem;
+
+  function mensData(cartData) {
+    document.querySelector("#container").innerHTML = null;
+
+    cartData.forEach((elem, index) => {
+      let div = document.createElement("div");
+
+      let image = document.createElement("img");
+      image.setAttribute("src", elem.image);
+
+      let category = document.createElement("p");
+      category.textContent = elem.category;
+
+      let title = document.createElement("h2");
+      title.textContent = elem.title;
+
+      let quantity = document.createElement("div");
+      quantity.setAttribute("id", "quant");
+
+      let minusBtn = document.createElement("span");
+      minusBtn.textContent = " - ";
+      minusBtn.addEventListener("click", function () {
+        numQuant.textContent = +numQuant.textContent - 1;
+        price.textContent = numQuant.textContent * elem.price;
+        if (numQuant.textContent == 0) {
+          cartData.splice(index, 1);
+          localStorage.setItem("cartItem", JSON.stringify(cartData));
+          mensData(cartData);
+        }
+        totalPrice = totalPrice - elem.price;
+        document.querySelector("#amount").textContent = totalPrice;
+      });
+
+      let numQuant = document.createElement("h2");
+      numQuant.textContent = "1";
+
+      let plusBtn = document.createElement("span");
+      plusBtn.textContent = " + ";
+      plusBtn.addEventListener("click", function () {
+        numQuant.textContent = +numQuant.textContent + 1;
+        price.textContent = numQuant.textContent * elem.price;
+        totalPrice = totalPrice + elem.price;
+        document.querySelector("#amount").textContent = totalPrice;
+      });
+
+      quantity.append(minusBtn, numQuant, plusBtn);
+
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+
+      let addbtn = document.createElement("button");
+      addbtn.textContent = "Remove";
+      addbtn.addEventListener("click", function () {
+        deleteCart(elem, price.textContent, index);
+      });
+
+      div.append(image, category, title, quantity, price, addbtn);
+
+      document.getElementById("container").append(div);
+    });
+  }
+  mensData(cartData);
+
+  function deleteCart(elem, price, index) {
+    cartData.splice(index, 1);
+    localStorage.setItem("cartItem", JSON.stringify(cartData));
+
+    totalPrice = totalPrice - Number(price);
+    document.querySelector("#amount").textContent = totalPrice;
+
+    totalItem--;
+    document.querySelector("#totalItem").textContent = totalItem;
+
+    mensData(cartData);
+  }
+  document
+    .querySelector("#coupon button")
+    .addEventListener("click", function () {
+      let inputValue = document.querySelector("#discount").value;
+      let disamount;
+      if (inputValue == "fitswell20" && totalPrice > 0) {
+        disamount = Math.floor(totalPrice - totalPrice * 0.2);
+        document.querySelector("#amount").textContent = disamount;
+      } else {
+        disamount = totalPrice;
+        document.querySelector("#amount").textContent = totalPrice;
+      }
+      localStorage.setItem("amount", disamount);
+    });
+</script>

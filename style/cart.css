@@ -1,0 +1,149 @@
+main {
+    width: 70%;
+    margin: auto;
+}
+#container div{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 0 3px 0;
+    text-align: center;
+    align-items: center;
+    margin: 30px 0;
+    padding: 0 30px;
+}
+#container div img{
+    width: 5%;
+}
+#container div button {
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    transition: 0.25s;
+    border: none;
+}
+#container div button:hover {
+    opacity: 0.9;
+    border-radius: 4px;
+    background-color: rgb(146, 16, 16);
+}
+#delivery,#bag,#amounttotal {
+    margin-top: 30px;
+}
+#bag h1 {
+    font-size: 24px;
+    margin: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+#bag p {
+    font-size: 16px;
+    margin: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 200;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+#bag p:last-child {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+#delivery h1{
+    font-size: 18px;
+    margin: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+#delivery p {
+    font-size: 16px;
+    margin: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 200;
+    opacity: 0.8;
+    margin-left: 20px;
+}
+#delivery span {
+    color: blue;
+    font-size: 18px;
+    opacity: 1;
+    font-weight: 1000;
+    cursor: pointer;
+}
+#amounttotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#amounttotal div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#amounttotal div h1 {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+#amounttotal div h1 span{
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+#amounttotal div button {
+    margin: 20px;
+    padding: 16px 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size:16px;
+}
+#amounttotal div button:hover {
+    opacity: 0.8;
+}
+#amounttotal p {
+    margin: 12px;
+    margin-left: 20px;
+}
+#amounttotal p a {
+    color: rgb(19, 168, 227);
+}
+#amounttotal p a:hover {
+    text-decoration: underline;
+}
+#quant {
+    display: flex;
+    justify-content: space-between;
+}
+#quant span{
+    margin: 16px 0;
+    width: 40px;
+}
+#quant h2{
+    margin: 16px 0;
+}
+#coupon {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+#coupon input {
+    padding: 4px 8px;
+    font-size: 16px;
+    border: none;
+}
+#coupon button {
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 14px;
+}

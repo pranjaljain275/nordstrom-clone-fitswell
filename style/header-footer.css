@@ -136,6 +136,7 @@ li {
     color: white;
     border: none;
     margin: 2px;
+    align-items: center;
 }
 #midbar #sign li >#acc:hover {
     border-bottom: none;
@@ -300,3 +301,10 @@ footer {
     background-color:whitesmoke;
     font-size: 14px;
 } */
+#logged {
+    font-size: 16px;
+    margin-right: 4px;
+}
+#account {
+    text-align: center;
+}

@@ -34,7 +34,8 @@
       </div>
       <div>
         <!-- <a class="signins" href="#" -->
-        Sign In
+        <span id="logged">Sign In</span>
+        
         <ul id="sign">
           <li><a href="#" id="acc">Your Account</a></li>
           <li id="account"><a href="signin.html">Sign In</a><a href="signup.html">Create Account</a></li>
@@ -48,7 +49,7 @@
         <i class="fa fa-angle-down"></i>
         <a href="index.html"><i class="fa fa-rss-square"></i>Stores</a>
         <a href="index.html"><i class="fa fa-credit-card"></i>Purchases</a>
-        <a href="index.html"><img src="image/emptybag-icon.png" alt="" /></a>
+        <a href="cart.html"><img src="image/emptybag-icon.png" alt="" /></a>
       </div>
     </div>
 
@@ -418,7 +419,7 @@
             <div>
               <ul>
                 <li id="dark"><a href="#">Clothing </a></li>
-                <li><a href="#">Activewear </a></li>
+                <li><a href="mens.html">Activewear </a></li>
                 <li><a href="#">Blazers & Sport Coats </a></li>
                 <li><a href="#">Coats & Jackets </a></li>
                 <li><a href="#">Dress Shirts </a></li>
@@ -1622,6 +1623,15 @@
 //     console.log(mainContent);
 //   }
 // }
+let accData = JSON.parse(localStorage.getItem("accdata")) || [];
+console.log(accData)
+
+
+// document.querySelector("#account").innerHTML = `<li id="account"><a>Log Out</a><a>Delete Account</a></li>`
+
+if(accData[0] != undefined) {
+  document.querySelector("#logged").textContent = `HI! ${accData[0].fname}`;
+}
 
 let count = 0;
 
@@ -1636,6 +1646,7 @@ function goNext() {
 
 function slideshow(num) {
   let slides = document.querySelectorAll("#trending #slides");
+  console.log(slides)
 
   if(num < 0) {
     count = slides.length-1;
