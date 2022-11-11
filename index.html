@@ -75,7 +75,7 @@
                 <li><a href="#">UGG Shop</a></li>
               </ul>
             </div>
-
+      
             <div>
               <ul>
                 <li id="dark"><a href="#">Clothing </a></li>
@@ -96,7 +96,7 @@
                 <li><a href="#">Underwear, Boxers & Socks</a></li>
               </ul>
             </div>
-
+      
             <div>
               <ul>
                 <li id="dark"><a href="">Shoes </a></li>
@@ -117,7 +117,7 @@
                 <li><a href="#">Skin Care</a></li>
               </ul>
             </div>
-
+      
             <div>
               <ul>
                 <li id="dark"><a href="#">Accessories </a></li>
@@ -137,7 +137,7 @@
                 <li><a href="#">Watches</a></li>
               </ul>
             </div>
-
+      
             <div>
               <ul>
                 <li id="dark"><a href="#">Designer </a></li>
@@ -159,7 +159,7 @@
                 <li><a href="#">Vince</a></li>
               </ul>
             </div>
-
+      
             <div class="right">
               <img src="https://n.nordstrommedia.com/id/128f0566-ba33-4c7b-979e-cc1fc4f28393.png" />
               <div>
@@ -1310,6 +1310,8 @@
       </div>
       <img src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="">
     </div>
+
+
   </header>
 
   <main>
@@ -1440,7 +1442,7 @@
           <p><a href="#">Get Inspired</a></p>
         </div>
       </div>
-      <!-- <div id="slides">
+      <div id="slides">
         <img src="https://n.nordstrommedia.com/id/ca2fbe1a-8500-4018-bb61-40e88bb3887b.jpeg?h=700&w=1608" alt="">
         <div>
           <h2>Festive & Fabulous</h2>
@@ -1455,9 +1457,9 @@
           <p>Explore spirit-lifting scents that evoke a feeling of comfort while awakening your mind, body and soul.</p>
           <p><a href="#">Fragrance</a></p>
         </div>
-      </div> -->
-      <!-- <button onclick="goPrev()" class="prev">&lt</button> -->
-      <!-- <button onclick="goNext()" class="next">&gt</button> -->
+      </div>
+      <button onclick="goPrev()" class="prev">&lt</button>
+      <button onclick="goNext()" class="next">&gt</button>
     </section>
 
     <div id="midline">
@@ -1603,25 +1605,52 @@
 </html>
 
 <script>
-  // let slides = document.querySelectorAll("#slides");
-  // console.log(slides);
-  // let counter = 0;
-  // slides.forEach((elem,index) => {
-  //   elem.style.top = `${index*100}%`
-  // })
+//   let mainContent = document.querySelector("#main-content");
 
-  // function slideshow() {
-  //   slides.forEach((elem) => {
-  //     elem.style.transform = `translateX(-${counter*100}%)`
-  //   });
-  // }
+// let nav = document.querySelectorAll("#btmbar>ul>li");
 
-  // function goPrev(){
-  //   counter--;
-  //   slideshow()
-  // }
-  // function goNext(){
-  //   counter++;
-  //   slideshow();
-  // }
+// for(let i=0; i<nav.length; i++) {
+//   document.querySelector("#btmbar>ul>li").addEventListener("click", navFun)
+// }
+
+// function navFun() {
+//   if(mainContent.style.display == "none") {
+//     mainContent.style.display == "flex";
+//     console.log(mainContent);
+//   } else {
+//     mainContent.style.display == "none";
+//     console.log(mainContent);
+//   }
+// }
+
+let count = 0;
+
+function goPrev() {
+  count--;
+  slideshow(count);
+}
+function goNext() {
+  count++;
+  slideshow(count);
+}
+
+function slideshow(num) {
+  let slides = document.querySelectorAll("#trending #slides");
+
+  if(num < 0) {
+    count = slides.length-1;
+    num = slides.length-1;
+  }
+  if(num > slides.length-1) {
+    count = 0;
+    num = 0;
+  }
+  
+  slides.forEach((elem) => {
+    elem.style.display = "none";
+  })
+  slides[num].style.display = "block";
+}
+slideshow(count);
+
 </script>

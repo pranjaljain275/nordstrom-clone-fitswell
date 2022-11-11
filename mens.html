@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mens FITs WELL</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // fetch(url)
+    // .then((res) => console.log(res.json()))
+    // // .then((data) => displayTable(data))
+    // .catch((err) => alert(err));
+    let data =  [];
+    async function getData() {
+        let url = "https://636d633891576e19e327545a.mockapi.io/products";
+        try {
+            let res = await fetch(url);
+            let output = await res.json();
+            data = output;
+            console.log(output);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    getData();
+</script>
