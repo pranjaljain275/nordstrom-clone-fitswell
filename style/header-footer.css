@@ -176,15 +176,18 @@ hr {
 #main-content {
     position: absolute;
     z-index: 9999;
-    display: none;
     justify-content: space-evenly;
     padding: 15px 30px;
+    display: none;
     margin-top: 0;
     left: 0;
     top: 50px;
     right: 0;
     background-color: white;
 }
+/* .active {
+    display: flex;
+} */
 #btmbar>ul>li:hover #main-content {
     display: flex;
 } 
