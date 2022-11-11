@@ -1,0 +1,65 @@
+
+h1 {
+    font-size: 30px;
+    margin: 20px auto;
+    text-align: center;
+}
+#sort {
+    text-align: right;
+}
+#sorting {
+    font-size: 20px;
+    padding: 6px 10px;
+    width: 400px;
+    margin: 20px auto;
+    margin-left: 20px;
+}
+#filtering {
+    font-size: 20px;
+    padding: 6px 10px;
+    width: 400px;
+    margin: 20px auto;
+    margin-right: 20px;
+}
+#container {
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 24px;
+    margin: auto 30px;
+}
+#container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 0 3px 0;
+    text-align: center;
+    align-items: center;
+}
+#container div img{
+    width: 70%;
+}
+#container div p {
+    margin: 10px 20px;
+    font-size: 16px;
+}
+#container div h2 {
+    margin: 10px 20px;
+    font-size: 20px;
+}
+#container div button {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(44, 5, 5);
+    color: white;
+    border-radius: 3px;
+}
+#container div button:hover {
+    background-color: #e30e0e;
+}
+
+#sortfilter {
+    display: flex;
+    justify-content: space-between;
+}
+

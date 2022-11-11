@@ -168,15 +168,12 @@ h1 {
   text-decoration: underline;
 }
 #trending {
-    position: relative;
+  position: relative;
 }
 #trending #slides {
-  /* position: relative; */
   display: none;
 }
 #trending #slides img {
-  /* display: flex; */
-  /* justify-content: space-around; */
   width: 90%;
 }
 #trending #slides div {
