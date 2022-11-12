@@ -49,21 +49,21 @@ h1 {
 #merry {
   position: relative;
 }
-#merry div:first-child img{
+#merry div:first-child img {
   width: 100%;
 }
-#merry div:last-child{
+#merry div:last-child {
   line-height: 1.5rem;
   position: absolute;
   z-index: 1;
   left: 30%;
   bottom: 5%;
 }
-#merry p{
+#merry p {
   font-size: 20px;
   text-align: center;
 }
-#merry span{
+#merry span {
   padding: 14px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin: 0 10px;
@@ -72,7 +72,7 @@ h1 {
 #merry span:hover {
   opacity: 0.8;
 }
-#merry div p:last-child{
+#merry div p:last-child {
   margin-top: 24px;
 }
 #gifts img {
@@ -227,10 +227,10 @@ h1 {
 #touch {
   position: relative;
 }
-#touch div:first-child img{
+#touch div:first-child img {
   width: 100%;
 }
-#touch div:last-child{
+#touch div:last-child {
   line-height: 1.5rem;
   position: absolute;
   z-index: 1;
@@ -240,7 +240,64 @@ h1 {
 #touch h2 {
   font-size: 24px;
 }
-#touch p{
+#touch p {
   font-size: 16px;
   margin-top: 12px;
+}
+.popup-screen {
+  backdrop-filter: blur(20px);
+  width: 100%;
+  z-index: 999999;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s ease;
+}
+.popup-screen.active {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-box {
+  position: relative;
+  background-color: white;
+  top: 30%;
+  left: 35%;
+  max-width: 350px;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px 0;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+.popup-screen.active .popup-box {
+  transform: scale(1);
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-size: 20px;
+}
+.popup-box h1 {
+  margin: 4px 0;
+  text-align: left;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.popup-box p {
+  margin-bottom: 20px;
+}
+.popup-box p a,
+.popup-box ul li a {
+  text-decoration: underline;
+}
+.popup-box p:nth-child(4) {
+  margin: 20px 0;
+}
+.popup-box ul li {
+  list-style: initial;
+  margin-left: 30px;
 }

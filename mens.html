@@ -22,25 +22,45 @@
   <body>
     <header id="headers"></header>
 
-    <h1>Men's All Activewear</h1>
-    <div id="sortfilter">
-      <div id="sort">
-        <select onchange="sorting()" id="sorting">
-          <option value="">Sort By Price</option>
-          <option value="asc">Low to High</option>
-          <option value="desc">High to Low</option>
-        </select>
+    <div id="activemen">
+      <div id="scroll">
+        <div>Product Type<span>&#43</span></div>
+        <div>Size<span>&#43</span></div>
+        <div>Color<span>&#43</span></div>
+        <div>Brand<span>&#43</span></div>
+        <div>Feature<span>&#43</span></div>
+        <div>Fit<span>&#43</span></div>
+        <div>Material<span>&#43</span></div>
+        <div>Price<span>&#43</span></div>
+        <div>Sale<span>&#43</span></div>
+        <div>Sleeve Length<span>&#43</span></div>
+        <div>Sports League<span>&#43</span></div>
+        <div>Sports Team<span>&#43</span></div>
+        <div>Style<span>&#43</span></div>
       </div>
-      <div id="filter">
-        <select onchange="filtering()" id="filtering">
-          <option value="">Filter by category</option>
-          <option value="Zella">Zella</option>
-          <option value="Stance">Stance</option>
-          <option value="Nike">Nike</option>
-        </select>
+
+      <div>
+        <h1>Men's All Activewear</h1>
+        <div id="sortfilter">
+          <div id="sort">
+            <select onchange="sorting()" id="sorting">
+              <option value="">Sort By Price</option>
+              <option value="asc">Low to High</option>
+              <option value="desc">High to Low</option>
+            </select>
+          </div>
+          <div id="filter">
+            <select onchange="filtering()" id="filtering">
+              <option value="">Filter by category</option>
+              <option value="Zella">Zella</option>
+              <option value="Stance">Stance</option>
+              <option value="Nike">Nike</option>
+            </select>
+          </div>
+        </div>
+        <div id="container"></div>
       </div>
     </div>
-    <div id="container"></div>
 
     <footer id="footers"></footer>
   </body>

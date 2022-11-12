@@ -186,9 +186,6 @@ hr {
     right: 0;
     background-color: white;
 }
-/* .active {
-    display: flex;
-} */
 #btmbar>ul>li:hover #main-content {
     display: flex;
 } 

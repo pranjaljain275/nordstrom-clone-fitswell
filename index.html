@@ -14,6 +14,20 @@
 </head>
 
 <body>
+  <div class="popup-screen">
+    <div class="popup-box">
+      <h1>We Ship to India</h1>
+      <p>A few things to know:</p>
+      <ul>
+        <li>Prices and payment are shown in INR.</li>
+        <li>International shipping costs are based on your items, shipping method and destination.</li>
+        <li>Not shipping to India? <a href="#">Change your country</a></li>
+      </ul>
+      <p><a href="#">Change your country</a> or <a href="#">contact us</a> if you have questions about international shipping.</p>
+      <a class="close" href="#"><i class="fa fa-close"></i></a>
+    </div>
+  </div>
+
   <header>
     <div id="topbar">
       <div></div>
@@ -1600,12 +1614,36 @@
       <p>&copy;2021 FITs WELL,Inc</p>
     </div>
   </footer>
-
 </body>
 
 </html>
 
+
 <script>
+  // popup on load
+  let popupScreen = document.querySelector(".popup-screen");
+  let popupBox = document.querySelector(".popup-box");
+  let closeBtn = document.querySelector(".close");
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      popupScreen.classList.add("active")
+    }, 2000)
+  })
+
+  closeBtn.addEventListener("click", ()=> {
+    popupScreen.classList.remove("active");
+    document.cookie = "WebsiteName=FITsWELL; max-age=" + 24*60*60;
+  })
+
+  const WebsiteCookie = document.cookie.indexOf("WebsiteName=");
+
+if (WebsiteCookie != -1) {
+  popupScreen.style.display = "none"; //Hide the popup screen if the cookie is not expired.
+} else {
+  popupScreen.style.display = "block"; //Show the popup screen if the cookie is expired.
+}
+  // dropdown
 //   let mainContent = document.querySelector("#main-content");
 
 // let nav = document.querySelectorAll("#btmbar>ul>li");
@@ -1623,6 +1661,8 @@
 //     console.log(mainContent);
 //   }
 // }
+
+// login name
 let accData = JSON.parse(localStorage.getItem("accdata")) || [];
 console.log(accData)
 
@@ -1633,6 +1673,7 @@ if(accData[0] != undefined) {
   document.querySelector("#logged").textContent = `HI! ${accData[0].fname}`;
 }
 
+// trending slider
 let count = 0;
 
 function goPrev() {

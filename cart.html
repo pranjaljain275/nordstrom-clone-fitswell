@@ -104,9 +104,12 @@
           cartData.splice(index, 1);
           localStorage.setItem("cartItem", JSON.stringify(cartData));
           mensData(cartData);
+          totalItem--;
+          document.querySelector("#totalItem").textContent = totalItem;
         }
         totalPrice = totalPrice - elem.price;
         document.querySelector("#amount").textContent = totalPrice;
+
       });
 
       let numQuant = document.createElement("h2");
@@ -165,4 +168,8 @@
       }
       localStorage.setItem("amount", disamount);
     });
+
+    document.getElementById("checkout").addEventListener("click", ()=> {
+      window.location.href = "payment.html";
+    })
 </script>

@@ -62,4 +62,29 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
-
+#activemen {
+    display: flex;
+}
+#scroll {
+    display: flex;
+    max-height: calc(100vh - 40px);
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: scroll;
+    width: 40%;
+    position: sticky;
+    top: 20px;
+}
+#scroll div {
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+#scroll div span {
+    font-size: 24px;
+    opacity: 0.8;
+}
