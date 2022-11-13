@@ -22,8 +22,8 @@ section {
   width: 40%;
   position: absolute;
   z-index: 3;
-  top: 230px;
-  right: 190px;
+  top: 180px;
+  right: 170px;
 }
 #landing1 div:last-child div {
   display: flex;
@@ -96,6 +96,11 @@ h1 {
 }
 #thread > div > div > img {
   width: 100%;
+  transition: 0.5s ease-in-out;
+}
+#thread > div > div > img:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
 }
 #thread > h1 {
   margin-bottom: 10px;
@@ -136,6 +141,11 @@ h1 {
 }
 #service > div > div > img {
   width: 100%;
+  transition: 0.5s ease-in-out;
+}
+#service > div > div > img:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
 }
 #service > h1 {
   margin-bottom: 10px;
@@ -175,6 +185,11 @@ h1 {
 }
 #trending #slides img {
   width: 90%;
+  transition: 0.5s ease-in-out;
+}
+#trending #slides img:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
 }
 #trending #slides div {
   width: 30%;
@@ -218,6 +233,11 @@ h1 {
 }
 #category > div > div > img {
   width: 100%;
+  transition: 0.5s ease-in-out;
+}
+#category > div > div > img:hover {
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
 }
 #category > div > div > h2 {
   margin: 10px auto;
@@ -300,4 +320,50 @@ h1 {
 .popup-box ul li {
   list-style: initial;
   margin-left: 30px;
+}
+
+@media All and (min-width: 768px) and (max-width: 1048px) {
+  #landing1 > div:last-child {
+    width: 40%;
+    top: 130px;
+    right: 130px;
+  }
+  #trending #slides div {
+    width: 30%;
+    right: 70px;
+    bottom: 35%;
+  }
+  * {
+    font-size: 12px;
+  }
+}
+@media All and (min-width: 540px) and (max-width: 768px) {
+  #landing1 > div:last-child {
+    width: 50%;
+    top: 80px;
+    right: 70px;
+  }
+  #trending #slides div {
+    width: 30%;
+    right: 50px;
+    bottom: 25%;
+  }
+  * {
+    font-size: 10px;
+  }
+}
+@media All and (min-width: 360px) and (max-width: 540px) {
+  #landing1 > div:last-child {
+    width: 60%;
+    top: 50px;
+    right: 4px;
+  }
+  #trending #slides div {
+    width: 30%;
+    right: 30px;
+    bottom: 15%;
+  }
+  * {
+    font-size: 8px;
+  }
 }

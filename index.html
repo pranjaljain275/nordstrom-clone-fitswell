@@ -11,6 +11,7 @@
     type="image/x-icon" />
   <link rel="stylesheet" href="style/header-footer.css" />
   <link rel="stylesheet" href="style/home.css">
+  <script src="script/index.js" defer></script>
 </head>
 
 <body>
@@ -72,7 +73,7 @@
     <div id="btmbar">
       <ul>
         <li>
-          <a href="#">Holiday Gifts</a>
+          <a class="toggle" href="#">Holiday Gifts</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -185,7 +186,7 @@
           </div>
         </li>
         <li>
-          <a href="">Holiday Deals</a>
+          <a class="toggle" href="#">Holiday Deals</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -298,7 +299,7 @@
           </div>
         </li>
         <li>
-          <a href="">Women</a>
+          <a class="toggle" href="#">Women</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -411,7 +412,7 @@
           </div>
         </li>
         <li>
-          <a href="">Men</a>
+          <a class="toggle" href="#">Men</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -524,7 +525,7 @@
           </div>
         </li>
         <li>
-          <a href="">Kids</a>
+          <a class="toggle" href="#">Kids</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -637,7 +638,7 @@
           </div>
         </li>
         <li>
-          <a href="">Young Adult</a>
+          <a class="toggle" href="#">Young Adult</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -750,7 +751,7 @@
           </div>
         </li>
         <li>
-          <a href="">Activewear</a>
+          <a class="toggle" href="#">Activewear</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -863,7 +864,7 @@
           </div>
         </li>
         <li>
-          <a href="">Home</a>
+          <a class="toggle" href="#">Home</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -976,7 +977,7 @@
           </div>
         </li>
         <li>
-          <a href="">Beauty</a>
+          <a class="toggle" href="#">Beauty</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -1089,7 +1090,7 @@
           </div>
         </li>
         <li>
-          <a href="">Designer</a>
+          <a class="toggle" href="#">Designer</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -1202,7 +1203,7 @@
           </div>
         </li>
         <li>
-          <a href="">The Thread</a>
+          <a class="toggle" href="#">The Thread</a>
           <div id="main-content">
             <div id="left">
               <ul>
@@ -1317,17 +1318,16 @@
       </ul>
     </div>
 
-    <div id="bottombar">
-      <img src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="">
-      <div>
-        <p>Shop what you love—faster and easier.</p>
-        <p><a href="signin.html">Sign In or Create an Account</a></p>
-      </div>
-      <img src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="">
-    </div>
-
-
   </header>
+
+  <div id="bottombar">
+    <img src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="">
+    <div>
+      <p>Shop what you love—faster and easier.</p>
+      <p><a href="signin.html">Sign In or Create an Account</a></p>
+    </div>
+    <img src="https://n.nordstrommedia.com/id/c30eb052-a9da-4529-95ed-0d1568cc55ad.png?h=22&w=536" alt="">
+  </div>
 
   <main>
     <section id="landing1">
@@ -1515,14 +1515,6 @@
       <img src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="">
     </div>
 
-    <!-- <section id="loving">
-      <div></div>
-    </section> -->
-
-    <!-- <div id="midline">
-      <img src="https://n.nordstrommedia.com/id/5ec3d3de-9e8c-4317-bc28-3b42b503268e.png?h=17&w=1608" alt="">
-    </div> -->
-
     <section id="touch">
       <div>
         <img src="https://n.nordstrommedia.com/id/97312f94-3d15-428d-bf49-70656690cf33.jpeg?h=200&w=1608" alt="">
@@ -1620,6 +1612,7 @@
 
 
 <script>
+
   // popup on load
   let popupScreen = document.querySelector(".popup-screen");
   let popupBox = document.querySelector(".popup-box");
@@ -1643,24 +1636,6 @@ if (WebsiteCookie != -1) {
 } else {
   popupScreen.style.display = "block"; //Show the popup screen if the cookie is expired.
 }
-  // dropdown
-//   let mainContent = document.querySelector("#main-content");
-
-// let nav = document.querySelectorAll("#btmbar>ul>li");
-
-// for(let i=0; i<nav.length; i++) {
-//   document.querySelector("#btmbar>ul>li").addEventListener("click", navFun)
-// }
-
-// function navFun() {
-//   if(mainContent.style.display == "none") {
-//     mainContent.style.display == "flex";
-//     console.log(mainContent);
-//   } else {
-//     mainContent.style.display == "none";
-//     console.log(mainContent);
-//   }
-// }
 
 // login name
 let accData = JSON.parse(localStorage.getItem("accdata")) || [];
