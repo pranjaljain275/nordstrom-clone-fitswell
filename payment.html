@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="logobag">
-      <img src="image/FITs WELL2.jpg" alt="" />
+      <a href="index.html"><img src="image/FITs WELL2.jpg" alt="" /></a>
       <a href="cart.html"><img src="image/emptybag-icon.png" alt="" /></a>
     </div>
     <section>
@@ -131,14 +131,16 @@
     let otpassword = document.getElementById("onetime").value;
 
     if (otpassword == "1234") {
-      alert("Payment successful");
+      alert("Payment successful: !Order Placed.");
       otp = document.querySelector(".otp");
       // document.querySelector(".close").addEventListener("click", function () {
       //   otp.classList.remove("active");
       // });
       cartData = null;
       localStorage.setItem("cartItem", JSON.stringify(cartData));
-      window.location.href = "mens.html";
+      setTimeout(()=>{
+        window.location.href = "mens.html";
+      },1500)
     } else {
       alert("Wrong otp");
     }
