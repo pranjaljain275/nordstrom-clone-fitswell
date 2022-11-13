@@ -109,16 +109,20 @@ li {
     z-index: 10;
     background-color: white;
     top: 103px;
-    right: 250px;
+    right: 280px;
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0 5px 15px 0;
 }
-#midbar>div:last-child:hover #sign {
-    display: flex;
+#logged {
+    font-size: 16px;
+    cursor: pointer;
 }
+/* #midbar #logged:hover + #sign {
+    display: flex;
+} */
 #midbar #sign li {
     margin: 10px 0;
     text-align: left;
@@ -305,6 +309,7 @@ footer {
 #logged {
     font-size: 16px;
     margin-right: 4px;
+    cursor: pointer;
 }
 #account {
     text-align: center;

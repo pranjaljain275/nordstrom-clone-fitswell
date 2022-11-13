@@ -47,23 +47,16 @@
           <input type="text" placeholder="Search for products or brands" />
         </div>
         <div>
-          <!-- <a class="signins" href="#" -->
-          <span id="logged">Sign In</span>
-
+          <a href="#" id="logged">Sign In<i class="fa fa-angle-down"></i></a>     
           <ul id="sign">
             <li><a href="#" id="acc">Your Account</a></li>
-            <li id="account">
-              <a href="signin.html">Sign In</a
-              ><a href="signup.html">Create Account</a>
-            </li>
-            <!-- <li></li> -->
+            <li id="account"><a href="signin.html">Sign In</a><a href="signup.html">Create Account</a></li>
             <li><a href="#">Purchases</a></li>
             <li><a href="#">Wishlist</a></li>
             <li><a href="#">Shipping Addresses</a></li>
             <li><a href="#">Payment Methods</a></li>
             <li><a href="#">Your Stylists</a></li>
           </ul>
-          <i class="fa fa-angle-down"></i>
           <a href="index.html"><i class="fa fa-rss-square"></i>Stores</a>
           <a href="index.html"><i class="fa fa-credit-card"></i>Purchases</a>
           <a href="cart.html"
@@ -1394,6 +1387,7 @@
     return acc + +elem.price;
   }, 0);
   document.querySelector("#amount").textContent = totalPrice;
+  localStorage.setItem("amount", totalPrice);
 
   let totalItem = +cartData.length;
   document.querySelector("#totalItem").textContent = totalItem;
@@ -1478,11 +1472,11 @@
 
     mensData(cartData);
   }
+  let disamount;
   document
-    .querySelector("#coupon button")
+    .querySelector("#coupon>button")
     .addEventListener("click", function () {
       let inputValue = document.querySelector("#discount").value;
-      let disamount;
       if (inputValue == "fitswell20" && totalPrice > 0) {
         disamount = Math.floor(totalPrice - totalPrice * 0.2);
         document.querySelector("#amount").textContent = disamount;
