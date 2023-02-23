@@ -14,9 +14,8 @@
       href="https://n.nordstrommedia.com/id/c4fb2a09-3657-4161-9b79-6412897d9399.png"
       type="image/x-icon"
     />
-    <!-- <link rel="stylesheet" href="style/home.css"> -->
-    <!-- <link rel="stylesheet" href="style/header-footer.css" /> -->
     <link rel="stylesheet" href="style/payment.css" />
+    <script src="script/payment.js" defer></script>
   </head>
   <body>
     <div class="otp">
@@ -94,55 +93,3 @@
     </section>
   </body>
 </html>
-<script>
-  let paymentTotal = localStorage.getItem("amount") || 0;
-  document.querySelector("#paymenttotal").textContent = paymentTotal;
-
-  // payment
-  document.querySelector("#pay").addEventListener("click", sendOtpFunc);
-
-  let otp = document.querySelector(".otp");
-
-  function sendOtpFunc() {
-    let cardnum = document.getElementById("cardnum").value;
-    let cvv = document.getElementById("cvv").value;
-    let date = document.getElementById("date").value;
-
-    if (cardnum == "1234123412341234" && cvv == "123" && date == "05/1999") {
-      otp.classList.add("active"); // popup show otp
-    } else {
-      alert("Wrong Detail");
-    }
-  }
-  // popup-close button
-  otp = document.querySelector(".otp");
-  document.querySelector(".close").addEventListener("click", function () {
-    otp.classList.remove("active");
-  });
-
-  // enter otp
-  let cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
-
-  document.querySelector("form").addEventListener("submit", enterOtpFunc);
-
-  function enterOtpFunc(event) {
-    event.preventDefault();
-
-    let otpassword = document.getElementById("onetime").value;
-
-    if (otpassword == "1234") {
-      alert("Payment successful: !Order Placed.");
-      otp = document.querySelector(".otp");
-      // document.querySelector(".close").addEventListener("click", function () {
-      //   otp.classList.remove("active");
-      // });
-      cartData = null;
-      localStorage.setItem("cartItem", JSON.stringify(cartData));
-      setTimeout(()=>{
-        window.location.href = "mens.html";
-      },1500)
-    } else {
-      alert("Wrong otp");
-    }
-  }
-</script>
