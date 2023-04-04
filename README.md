@@ -11,8 +11,14 @@ Chick-fil-A is a food delivery website where you can order food mostly based on 
 
 ## Screenshots
 
+## HOME PAGE
+![image](https://user-images.githubusercontent.com/109551304/229811872-53418845-53a6-411d-91a0-dd718778b497.png)
+
+## MENS PAGE
 ![image](https://user-images.githubusercontent.com/109551304/229811176-c4efbf20-cc12-4951-aec1-733ba9382111.png)
-![image](https://user-images.githubusercontent.com/109551304/229810844-678cbfec-f3fb-431d-9f17-230204e4932d.png)
+
+## SIGNUP PAGE
+![image](https://user-images.githubusercontent.com/109551304/229812051-47f429b8-2702-4ee2-9467-df7fa6529c9c.png)
 
 ## Deployment
 
